@@ -15,11 +15,5 @@ class Student:
     def __lt__(self, other):
         return self.rank_index < other.rank_index
 
-
-
-tim = Student("Tim", "Junior")
-julie = Student("Julie", "Sophomore")
-
-# print(f"DEBUG: Tim same rank as Julie = {tim.rank_index == julie.rank_index}")
-print(f"DEBUG: Tim less than Julie = {tim.rank_index < julie.rank_index}")
-print(f"DEBUG: Julie less than Tim = {julie.rank_index < tim.rank_index}")
+    def __str__(self):
+        return f"{self.name} {self.class_rank}"
