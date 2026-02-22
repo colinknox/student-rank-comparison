@@ -11,15 +11,15 @@ class Student:
 
     def __gt__(self, other):
         return self.rank_index > other.rank_index
-
-
+    
+    def __lt__(self, other):
+        return self.rank_index < other.rank_index
 
 
 
 tim = Student("Tim", "Junior")
-julie = Student("Julie", "Senior")
-# julie = Student("Julie", "Junior")
+julie = Student("Julie", "Sophomore")
 
 # print(f"DEBUG: Tim same rank as Julie = {tim.rank_index == julie.rank_index}")
-print(f"DEBUG: Tim greater than Julie = {tim.rank_index > julie.rank_index}")
-print(f"DEBUG: Julie greater than Tim = {julie.rank_index > tim.rank_index}")
+print(f"DEBUG: Tim less than Julie = {tim.rank_index < julie.rank_index}")
+print(f"DEBUG: Julie less than Tim = {julie.rank_index < tim.rank_index}")
